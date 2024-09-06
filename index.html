@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <fieldset>
+        <table>
+            <tr>
+                <td>Physics:</td>
+                <td><input type="number" id="a"></td>
+            </tr>
+            <tr>
+                <td>Urdu:</td>
+                <td><input type="number" id="b"></td>
+            </tr>
+            <tr>
+                <td>English:</td>
+                <td><input type="number" id="c"></td>
+            </tr>
+            <tr>
+                <td>Biology:</td>
+                <td><input type="number" id="d"></td>
+            </tr>
+            <tr>
+                <td>Chemistry:</td>
+                <td><input type="number" id="e"></td>
+            </tr>
+            <tr>
+                <td>Math:</td>
+                <td><input type="number" id="f"></td>
+            </tr>
+            <tr>
+                <td><button onclick="calculate()">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>Total Marks:</td>
+                <td class="sign">600</td>
+            </tr>
+            <tr>
+                <td>Obtained Marks:</td>
+                <td><input type="number" id="obt"></td>
+            </tr>
+            <tr>
+                <td>Percentage%:</td>
+                <td><input type="number" id="per"></td>
+            </tr>
+            <tr>
+                <td>Grade:</td>
+                <td><input type="number" id="grade"></td>
+            </tr>
+            <tr>
+                <td>Remarks:</td>
+                <td><input type="number" id="rem"></td>
+            </tr>
+            <tr>
+                <td>Signature:</td>
+                <td><input></td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+        function calculate() {
+            var Physics = parseInt(document.getElementById('a').value);
+            var Urdu = parseInt(document.getElementById('b').value);
+            var English = parseInt(document.getElementById('c').value);
+            var Biology = parseInt(document.getElementById('d').value);
+            var Chemistry = parseInt(document.getElementById('e').value);
+            var Math = parseInt(document.getElementById('f').value);
+
+            if (Physics > 100 || Urdu > 100 || English > 100 || Biology > 100 || Chemistry > 100 || Math > 100) {
+                alert('Please Enter Correct Value');
+            }
+            else {
+                var Obtain = Physics + Urdu + English + Biology + Chemistry + Math;
+                document.getElementById('obt').value = Obtain;
+
+                var per = Obtain * 100 / 600;
+                document.getElementById('per').value = per;
+            }
+            
+            if(per>80) {
+                document.getElementById('grade').value = 'A+';
+            }
+            else if (per>= 70) {
+                document.getElementById('grade').value = 'A';
+            }
+            else if (per>= 60) {
+                document.getElementById('grade').value = 'B';
+            }
+            else if (per>= 50) {
+                document.getElementById('grade').value = 'c';
+            }
+            else if (per>= 40) {
+                document.getElementById('grade').value = 'D';
+            }
+            else {
+                documents.getElementById('grade').value = 'F';
+            }
+
+            if(per>=50){
+                document.getElementById('rem').value = 'Pass';
+            }
+            else{
+                document.getElementById('rem').value = 'Fail';
+
+            }
+
+    }
+    </script>
+</body>
+
+</html>

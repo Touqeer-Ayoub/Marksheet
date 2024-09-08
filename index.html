@@ -52,11 +52,11 @@
             </tr>
             <tr>
                 <td>Grade:</td>
-                <td><input type="number" id="grade"></td>
+                <td><input type="text" id="grade"></td>
             </tr>
             <tr>
                 <td>Remarks:</td>
-                <td><input type="number" id="rem"></td>
+                <td><input type="text" id="rem"></td>
             </tr>
             <tr>
                 <td>Signature:</td>
@@ -100,7 +100,7 @@
                 document.getElementById('grade').value = 'D';
             }
             else {
-                documents.getElementById('grade').value = 'F';
+                document.getElementById('grade').value = 'F';
             }
 
             if(per>=50){
